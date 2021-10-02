@@ -1,11 +1,7 @@
-import './App.css';
+import "./App.css";
 
 function App() {
-  return (
-    <div className="App">
-      Hello Team Crown-Ecommerce !! 
-    </div>
-  );
+  return <div className="App">Hello Team Crown-Ecommerce !!</div>;
 }
 
 export default App;

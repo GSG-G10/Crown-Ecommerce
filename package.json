@@ -6,7 +6,9 @@
   "scripts": {
     "start": "node server/index.js",
     "dev" : "nodemon server/index.js",
-    "client": "cd client && npm start"
+    "client": "cd client && npm start",
+    "setup-project":"npm i && cd client && npm i"
+
   },
   "repository": {
     "type": "git",

@@ -1,3 +1,4 @@
 const fetchProducts = require('./getProducts');
+const { signup } = require('./signupControllers');
 
-module.exports = { fetchProducts };
+module.exports = { fetchProducts, signup };

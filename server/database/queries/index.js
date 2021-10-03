@@ -1,3 +1,4 @@
 const getProducts = require('./getProducts');
+const { checkUserQuery, addUserQuery } = require('./signupQueries');
 
-module.exports = { getProducts };
+module.exports = { getProducts, checkUserQuery, addUserQuery };

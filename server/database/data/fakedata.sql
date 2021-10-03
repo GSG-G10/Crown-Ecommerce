@@ -3,7 +3,6 @@ INSERT INTO USERS (username,f_name, email, pasword) VALUES ('elham','Elham','elh
 INSERT INTO USERS (username,f_name, email, pasword) VALUES ('ibrahim','Ibrahim','ibrahim@gmail.com', '123456');
 
 
-
 INSERT INTO PRODUCTS (title, category, price, image1,image2,image3,image4) VALUES('this girl is on fire','women',25,
 'https://image.spreadshirtmedia.com/image-server/v1/mp/products/T943A231MPA3084PT17X67Y22D1025124049FS3247/views/1,width=800,height=800,appearanceId=231,backgroundColor=F2F2F2,modelId=320,crop=detail/this-girl-is-on-fire-womens-rolled-sleeve-t-shirt.jpg',
 'https://image.spreadshirtmedia.com/image-server/v1/mp/products/T943A231MPA3084PT17X67Y22D1025124049FS3247/views/1,width=800,height=800,appearanceId=231,backgroundColor=F2F2F2,modelId=2294,crop=detail/this-girl-is-on-fire-womens-rolled-sleeve-t-shirt.jpg',

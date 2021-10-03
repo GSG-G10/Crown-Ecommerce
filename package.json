@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node server/index.js",
-    "dev": "nodemon server/index.js",
+    "start": "set NODE_ENV=production& node server/index.js",
+    "dev": "set NODE_ENV=development& nodemon server/index.js",
     "setup-project": "npm i && cd client && npm i",
     "client": "cd client && npm start",
     "heroku-postbuild": "cd client && npm install && npm run build"
@@ -25,6 +25,7 @@
     "bcryptjs": "^2.4.3",
     "compression": "^1.7.4",
     "cookie-parser": "^1.4.5",
+    "cross-env": "^7.0.3",
     "env2": "^2.2.2",
     "express": "^4.17.1",
     "joi": "^17.4.2",

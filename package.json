@@ -4,10 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node server/index.js",
-    "dev": "nodemon server/index.js",
+    "start": "set NODE_ENV=production& node server/index.js",
+    "dev": "set NODE_ENV=development& nodemon server/index.js",
+    "setup-project": "npm i && cd client && npm i",
     "client": "cd client && npm start",
-    "setup-project": "npm i && cd client && npm i"
+    "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "repository": {
     "type": "git",

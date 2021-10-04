@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import { Carousel } from "../components";
+import { Carousel, Quotes } from "../components";
 function Home() {
   return (
     <Fragment>
@@ -7,6 +7,7 @@ function Home() {
       {/* Carousel */}
       <Carousel />
       {/* quotes */}
+      <Quotes />
       {/* category & button */}
       {/* collection */}
       {/* footer */}

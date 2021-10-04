@@ -26,12 +26,4 @@ CREATE TABLE CART(
     quantity INTEGER DEFAULT 0
 );
 
-
-
-INSERT INTO USERS (username, f_name ,email ,pasword) VALUES 
-('ahmedAbadi' , 'ahmed' , 'ahmed@gmail.com' , '$2a$10$d0xD86pbtps5Qsci0KEqKuMvQ75sSvY76iMciv/sgJwbUOJmCFJtC'),
-('asdAbadi' , 'asd' , 'asd@gmail.com' , '$2a$10$AkqtzOyH/HU8srfRDauQouKfE1vSA0PmKA8UjLDX.acEr.jc7xSMW');
-
-
-
 COMMIT;

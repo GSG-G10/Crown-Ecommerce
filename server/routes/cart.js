@@ -1,8 +1,11 @@
 const router = require('express').Router();
 const {
-  getCartController, addToCartController, deleteProductController, getTotalCotroller,
+  getCartController,
+  getTotalCotroller,
+  addToCartController,
+  deleteProductController,
 } = require('../controllers');
-
+// , addToCartController, deleteProductController, getTotalCotroller,
 router.get('/:username', getCartController);
 router.post('/:username', addToCartController);
 router.delete('/:username/:productId', deleteProductController);

@@ -43,16 +43,16 @@ VALUES
 'https://image.spreadshirtmedia.com/image-server/v1/mp/productTypes/813/views/2/appearances/386,width=650,height=800,backgroundColor=F2F2F2,modelId=350,crop=detail.jpg',
 'https://image.spreadshirtmedia.com/image-server/v1/mp/productTypes/813/views/2/appearances/386,width=650,height=800,backgroundColor=F2F2F2,modelId=2474,crop=detail.jpg');
 
-INSERT INTO PRODUCTS (title, category, price, image1, image2,image3) 
-('Cool Mom Funny Mothers Gift','women',35,
-'https://image.spreadshirtmedia.com/image-server/v1/mp/products/T951A550MPA3076PT17X0Y24D1021763085FS2951/views/1,width=650,height=800,appearanceId=550,backgroundColor=F2F2F2/cool-mom-funny-mothers-gift-unisex-baseball-t-shirt.jpg',
-'https://image.spreadshirtmedia.com/image-server/v1/mp/products/T951A550MPA3076PT17X0Y24D1021763085FS2951/views/1,width=650,height=800,appearanceId=550,backgroundColor=F2F2F2,modelId=4892,crop=detail/cool-mom-funny-mothers-gift-unisex-baseball-t-shirt.jpg',
-'https://image.spreadshirtmedia.com/image-server/v1/mp/productTypes/951/views/2/appearances/550,width=650,height=800,backgroundColor=F2F2F2,modelId=4898,crop=detail.jpg'),
+-- INSERT INTO PRODUCTS (title, category, price, image1, image2,image3) 
+-- ('Cool Mom Funny Mothers Gift','women',35,
+-- 'https://image.spreadshirtmedia.com/image-server/v1/mp/products/T951A550MPA3076PT17X0Y24D1021763085FS2951/views/1,width=650,height=800,appearanceId=550,backgroundColor=F2F2F2/cool-mom-funny-mothers-gift-unisex-baseball-t-shirt.jpg',
+-- 'https://image.spreadshirtmedia.com/image-server/v1/mp/products/T951A550MPA3076PT17X0Y24D1021763085FS2951/views/1,width=650,height=800,appearanceId=550,backgroundColor=F2F2F2,modelId=4892,crop=detail/cool-mom-funny-mothers-gift-unisex-baseball-t-shirt.jpg',
+-- 'https://image.spreadshirtmedia.com/image-server/v1/mp/productTypes/951/views/2/appearances/550,width=650,height=800,backgroundColor=F2F2F2,modelId=4898,crop=detail.jpg'),
 
-('Tesla','men',50,
-'https://image.spreadshirtmedia.com/image-server/v1/mp/products/T20A2MPA3631PT17X41Y47D12443631FS9486CxD31818/views/1,width=800,height=800,appearanceId=2,backgroundColor=F2F2F2,modelId=2516,crop=detail/tesla-mens-premium-hoodie.jpg',
-'https://image.spreadshirtmedia.com/image-server/v1/mp/products/T951A54MPA3076PT17X0Y54D12443631FS9486CxD31818/views/1,width=800,height=800,appearanceId=54,backgroundColor=F2F2F2/tesla-unisex-baseball-t-shirt.jpg',
-'https://image.spreadshirtmedia.com/image-server/v1/mp/productTypes/20/views/2/appearances/2,width=800,height=800,backgroundColor=F2F2F2,modelId=2522,crop=detail.jpg');
+-- ('Tesla','men',50,
+-- 'https://image.spreadshirtmedia.com/image-server/v1/mp/products/T20A2MPA3631PT17X41Y47D12443631FS9486CxD31818/views/1,width=800,height=800,appearanceId=2,backgroundColor=F2F2F2,modelId=2516,crop=detail/tesla-mens-premium-hoodie.jpg',
+-- 'https://image.spreadshirtmedia.com/image-server/v1/mp/products/T951A54MPA3076PT17X0Y54D12443631FS9486CxD31818/views/1,width=800,height=800,appearanceId=54,backgroundColor=F2F2F2/tesla-unisex-baseball-t-shirt.jpg',
+-- 'https://image.spreadshirtmedia.com/image-server/v1/mp/productTypes/20/views/2/appearances/2,width=800,height=800,backgroundColor=F2F2F2,modelId=2522,crop=detail.jpg');
 
 
 INSERT INTO PRODUCTS (title, category, price, image1) 

@@ -6,4 +6,5 @@ const loginUser = require('../controllers/loginUser');
 
 router.post('/login', loginUser);
 router.use('/cart', cartRoute);
+
 module.exports = router;

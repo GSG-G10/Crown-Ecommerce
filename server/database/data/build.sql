@@ -27,5 +27,4 @@ CREATE TABLE CART(
     quantity INTEGER DEFAULT 0
 );
 
-
 COMMIT;

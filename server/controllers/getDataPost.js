@@ -1,8 +1,11 @@
 const getDataPostQuery = require('../database/queries/getDataPostQuery');
 
 const getDataPost = (req, res, next) => {
-  getDataPostQuery(req.query.q)
-    .then((data) => res.json({ data: data.rows }))
+  console.log('is 1:', req.params.query);
+  getDataPostQuery(req.params.query)
+    .then((data) => {
+      res.json(data);
+    })
     .catch((err) => next(err));
 };
 

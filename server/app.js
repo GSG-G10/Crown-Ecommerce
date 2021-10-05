@@ -3,8 +3,11 @@ const { join } = require('path');
 const express = require('express');
 
 const app = express();
+const cors = require('cors');
 const cookieParser = require('cookie-parser');
 const router = require('./routes');
+
+app.use(cors());
 
 app.use(cookieParser());
 app.use(express.json());

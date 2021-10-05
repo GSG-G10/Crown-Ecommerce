@@ -1,7 +1,8 @@
 const { getCart } = require('../../database/queries/cart');
+const { ExtractJwt } = require('../../utils');
 
 module.exports = (req, res, next) => {
-  const { username } = req.params;
+  const { id } = ExtractJwt(req);
   getCart(username)
     .then(({ rows }) => {
       res.status(200).json(rows);

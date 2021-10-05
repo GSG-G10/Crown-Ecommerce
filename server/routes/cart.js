@@ -5,8 +5,8 @@ const {
   addToCartController,
   deleteProductController,
 } = require('../controllers');
-// , addToCartController, deleteProductController, getTotalCotroller,
-router.get('/:username', getCartController);
+
+router.get('/', getCartController);
 router.post('/:username', addToCartController);
 router.delete('/:username/:productId', deleteProductController);
 router.get('/total/:username', getTotalCotroller);

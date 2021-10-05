@@ -1,5 +1,4 @@
 .header{
-  border: 1px solid red;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -7,6 +6,7 @@
   align-items: center;
   padding: 1rem;
 }
+
 .logo{
   font-weight: 900;
   font-size: 30px;
@@ -16,4 +16,20 @@
 .icon{
   display: flex;
   justify-content: space-around;
+}
+
+.icon > a {
+  margin: 0 7px;
+  font-size: 20px;
+}
+
+.icon > a:hover {
+  opacity: 60%;
+}
+
+a:link, a:visited {
+  text-align: center;
+  text-decoration: none;
+  color: #000;
+  display: inline-block;
 }

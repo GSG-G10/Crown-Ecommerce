@@ -63,6 +63,6 @@ VALUES('pink ladybug','kids',13,
 'https://image.spreadshirtmedia.com/image-server/v1/mp/products/T48A2MPA2954PT17X0Y1D1018577076FS2620/views/1,width=650,height=800,appearanceId=2,backgroundColor=F2F2F2/hockeysaurus-hockey-cute-funny-kids-dinosaur-gift-kids-t-shirt.jpg');
 
 
-INSERT INTO CART (username, id, quantity) VALUES
- ('noorin',5,2),
- ('elham',2,1);
+INSERT INTO CART (userId, productId, quantity) VALUES
+ (1,5,2),
+ (2,2,1);

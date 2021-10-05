@@ -1,4 +1,4 @@
-INSERT INTO USERS (username,f_name, email, pasword) 
+INSERT INTO USERS (username,f_name, email, password) 
 VALUES 
   ('noorin','Noor','noor@gmail.com', '$2a$10$AkqtzOyH/HU8srfRDauQouKfE1vSA0PmKA8UjLDX.acEr.jc7xSMW'),
   ('elham','Elham','elham@gmail.com', '$2a$10$d0xD86pbtps5Qsci0KEqKuMvQ75sSvY76iMciv/sgJwbUOJmCFJtC');

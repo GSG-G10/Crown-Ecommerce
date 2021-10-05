@@ -1,12 +1,10 @@
 const { verify } = require('jsonwebtoken');
 
-const getSession = (jwt) => {
-  if (!jwt) { return null; }
+const getSession = (jwt) => new Promise((resolve, reject) => {
   verify(jwt, process.env.SECRET_KEY, (err, data) => {
-    if (err) { return null; }
-    return data;
+    if (err) { return reject(err); }
+    return resolve(data);
   });
-  return null;
-};
+});
 
 module.exports = getSession;

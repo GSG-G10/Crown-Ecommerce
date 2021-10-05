@@ -5,8 +5,14 @@ const createSession = (userName) => {
     userName,
     loginTime: Date.now(),
   };
-  const cookie = sign(cookiePayload, process.env.SECRET_KEY);
-  return cookie;
+  return new Promise((resolve, reject) => {
+    sign(cookiePayload, process.env.SECRET_KEY, (err, token) => {
+      if (err) {
+        return reject(err);
+      }
+      return resolve(token);
+    });
+  });
 };
 
 module.exports = createSession;

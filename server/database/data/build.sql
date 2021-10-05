@@ -6,7 +6,7 @@ CREATE TABLE USERS(
     username VARCHAR(28) UNIQUE NOT NULL,
     f_name VARCHAR(20) NOT NULL,
     email VARCHAR(100) UNIQUE NOT NULL,
-    pasword VARCHAR(100) UNIQUE NOT NULL
+    password VARCHAR(100) UNIQUE NOT NULL
 );
 
 CREATE TABLE PRODUCTS(
@@ -25,13 +25,6 @@ CREATE TABLE CART(
     id INTEGER REFERENCES PRODUCTS(ID) NOT NULL,
     quantity INTEGER DEFAULT 0
 );
-
-
-
-INSERT INTO USERS (username, f_name ,email ,pasword) VALUES 
-('ahmedAbadi' , 'ahmed' , 'ahmed@gmail.com' , '$2a$10$d0xD86pbtps5Qsci0KEqKuMvQ75sSvY76iMciv/sgJwbUOJmCFJtC'),
-('asdAbadi' , 'asd' , 'asd@gmail.com' , '$2a$10$AkqtzOyH/HU8srfRDauQouKfE1vSA0PmKA8UjLDX.acEr.jc7xSMW');
-
 
 
 COMMIT;

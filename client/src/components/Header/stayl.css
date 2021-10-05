@@ -1,0 +1,19 @@
+.header{
+  border: 1px solid red;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 5vh;
+  align-items: center;
+  padding: 1rem;
+}
+.logo{
+  font-weight: 900;
+  font-size: 30px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.icon{
+  display: flex;
+  justify-content: space-around;
+}

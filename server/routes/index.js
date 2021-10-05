@@ -6,6 +6,6 @@ const loginUser = require('../controllers/loginUser');
 const getDataPost = require('../controllers/getDataPost');
 
 router.post('/login', loginUser);
-router.post('/search', getDataPost);
+router.get('/search', getDataPost);
 
 module.exports = router;

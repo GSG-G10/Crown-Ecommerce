@@ -44,6 +44,7 @@ VALUES
 'https://image.spreadshirtmedia.com/image-server/v1/mp/productTypes/813/views/2/appearances/386,width=650,height=800,backgroundColor=F2F2F2,modelId=2474,crop=detail.jpg');
 
 INSERT INTO PRODUCTS (title, category, price, image1, image2,image3) 
+VALUES
 ('Cool Mom Funny Mothers Gift','women',35,
 'https://image.spreadshirtmedia.com/image-server/v1/mp/products/T951A550MPA3076PT17X0Y24D1021763085FS2951/views/1,width=650,height=800,appearanceId=550,backgroundColor=F2F2F2/cool-mom-funny-mothers-gift-unisex-baseball-t-shirt.jpg',
 'https://image.spreadshirtmedia.com/image-server/v1/mp/products/T951A550MPA3076PT17X0Y24D1021763085FS2951/views/1,width=650,height=800,appearanceId=550,backgroundColor=F2F2F2,modelId=4892,crop=detail/cool-mom-funny-mothers-gift-unisex-baseball-t-shirt.jpg',

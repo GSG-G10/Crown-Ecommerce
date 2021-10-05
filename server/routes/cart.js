@@ -4,9 +4,10 @@ const {
   getTotalCotroller,
   addToCartController,
   deleteProductController,
+  isAuth,
 } = require('../controllers');
 
-router.get('/', getCartController);
+router.get('/', isAuth, getCartController);
 router.post('/:username', addToCartController);
 router.delete('/:username/:productId', deleteProductController);
 router.get('/total/:username', getTotalCotroller);

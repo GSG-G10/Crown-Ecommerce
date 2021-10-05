@@ -1,24 +1,33 @@
 import React from "react";
-import "./stayl.css";
+import "./style.css";
 import {
   HeartOutlined,
   ShoppingCartOutlined,
   UserOutlined,
 } from "@ant-design/icons";
+import { Link } from "react-router-dom";
 
 function Header(params) {
   return (
     <div className="header">
-      <div className="logo">YALA</div>
+      <Link to="/">
+        <div className="logo">YALA</div>
+      </Link>
 
       <div className="search-nav">
         <input type="text" />
       </div>
 
       <div className="icon">
-        <HeartOutlined />
-        <ShoppingCartOutlined />
-        <UserOutlined />
+        <Link to="/fav">
+          <HeartOutlined />
+        </Link>
+        <Link to="/card">
+          <ShoppingCartOutlined />
+        </Link>
+        <Link to="/user">
+          <UserOutlined />
+        </Link>
       </div>
     </div>
   );

@@ -4,7 +4,7 @@ const express = require('express');
 
 const app = express();
 const cookieParser = require('cookie-parser');
-// const router = require('./routes');
+const router = require('./routes');
 const product = require('./routes/product');
 
 app.use(cookieParser());
@@ -14,7 +14,7 @@ app.set('port', process.env.PORT || 8080);
 
 app.use('/product', product);
 
-// app.use('/api/v1/', router);
+app.use('/api/v1/', router);
 
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(join(__dirname, '..', 'client', 'build')));

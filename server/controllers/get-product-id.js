@@ -1,11 +1,11 @@
-const getProduct = require('../database/queries/get-product');
+const getProductQuery = require('../database/queries/get-product');
 
-const test = (req, res) => {
-  getProduct(req.params.id)
+const getProduct = (req, res, next) => {
+  const { productId } = req.params;
+  getProductQuery(productId)
     .then((data) => {
-      res.send(data.rows);
+      res.json({ data: rows });
     })
-    .catch(console.log(`product not found num: ${req.params.id}`));
+    .catch((err) => next(err));
 };
-
-module.exports = test;
+module.exports = getProduct;

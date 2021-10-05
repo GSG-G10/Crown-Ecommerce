@@ -10,9 +10,7 @@ function Category() {
   const [number, setNumber] = useState(0);
 
   useEffect(() => {
-    fetch(
-      `https://api.unsplash.com/search/collections?page=${number}&per_page=8&query=cat&client_id=V0G0X78-1-W7P0OS0w1Y7bift63SE2YXdP1bYH7jT30`
-    )
+    fetch(`/product`)
       .then((res) => res.json())
       .then((data) => {
         console.log(data);

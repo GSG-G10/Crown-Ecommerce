@@ -7,6 +7,7 @@ const { signToken } = require('../utils/jwt');
 
 const checkLogin = (req, res, next) => {
   let userId;
+
   loginSchema.validateAsync(req.body)
     .then((validate) => loginQuery(validate.email))
     .then((result) => {
@@ -15,8 +16,8 @@ const checkLogin = (req, res, next) => {
       }
       throw ({ status: 401, msg: 'you need to signup ' });
     }).then((userData) => {
-      const { password, usersId } = userData.rows[0];
-      userId = usersId;
+      const { password, user_id } = userData.rows[0];
+      userId = user_id;
       return password;
     })
     .then((hashed) => compare(req.body.password, hashed))

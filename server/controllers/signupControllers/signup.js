@@ -1,4 +1,6 @@
-const { createCookies, createSession } = require('../../utils');
+const getUserQuery = require('../../database/queries/getUser');
+const { createCookies } = require('../../utils');
+const { signToken } = require('../../utils/jwt');
 const { signupSchema } = require('../../utils/validation/signupValidation');
 const checkUser = require('./checkUser');
 const createUser = require('./createUser');
@@ -14,7 +16,9 @@ const signup = (req, res) => {
       if (exists) { throw { message: exists, cause: 'validation error' }; }
     }))
     .then(() => createUser(userName, email, firstName, password))
-    .then(() => createSession(userName))
+    .then(() => getUserQuery(userName, email))
+    .then((data) => data.rows[0].user_id)
+    .then((userId) => signToken({ user_id: userId }))
     .then((token) => createCookies(res, userName, true, token))
     .then(() => res.status(201).json({ message: 'user registered successfully' }))
     .catch((err) => {

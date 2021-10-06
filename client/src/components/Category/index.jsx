@@ -6,22 +6,23 @@ import "antd/dist/antd.css";
 const { TabPane } = Tabs;
 
 function Category() {
-  const [allData, setAllData] = useState({});
-  const [number, setNumber] = useState(0);
+  const [allData, setAllData] = useState([]);
+  const [filterData, setFilterData] = useState([]);
 
   useEffect(() => {
-    fetch(`/product`)
+    fetch(`/api/v1/product/`)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         setAllData(data);
       })
       .catch((err) => console.log(err));
-  }, [number]);
+  }, []);
 
-  function callback(tab) {
-    console.log(tab);
-  }
+  const filterDataFunction = (category) => {
+    const filterCategory = allData.filter((aaa) => aaa.category === category);
+    console.log(filterCategory);
+    setFilterData(filterCategory);
+  };
 
   return (
     <div>
@@ -29,32 +30,37 @@ function Category() {
         defaultActiveKey="1"
         onChange={(key) => {
           console.log(key);
-          setNumber(key);
+          filterDataFunction(key);
         }}
         className="category-bar"
       >
-        <TabPane tab="New" key="1">
-          New
+        <TabPane tab="New" key="new">
+          new
         </TabPane>
-        <TabPane tab="Men" key="2">
+        <TabPane tab="Men" key="men">
           men
         </TabPane>
-        <TabPane tab="Women" key="3">
+        <TabPane tab="Women" key="women">
           women
         </TabPane>
-        <TabPane tab="Kids" key="4">
+        <TabPane tab="Kids" key="kids">
           kids
         </TabPane>
-        <TabPane tab="Both" key="5">
+        <TabPane tab="Both" key="Both">
           Both
         </TabPane>
-        <TabPane tab="About As" key="6">
+        <TabPane tab="About As" key="About As">
           About As
         </TabPane>
-        <TabPane tab="Oue Blog" key="7">
+        <TabPane tab="Oue Blog" key="Oue Blog">
           Oue Blog
         </TabPane>
       </Tabs>
+      <div>
+        {filterData.length !== 0
+          ? filterData.map((ele) => console.log(ele))
+          : "loading ... !"}
+      </div>
     </div>
   );
 }

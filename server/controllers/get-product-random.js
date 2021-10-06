@@ -2,8 +2,8 @@ const getProductQueryRandom = require('../database/queries/get-product-random');
 
 const getProductRandom = (req, res, next) => {
   getProductQueryRandom()
-    .then((randomArray) => {
-      res.json(randomArray);
+    .then(({ rows }) => {
+      res.json({ data: rows });
     })
     .catch((err) => next(err));
 };

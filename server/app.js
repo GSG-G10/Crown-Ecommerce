@@ -1,11 +1,13 @@
 require('env2')('.env');
 const { join } = require('path');
 const express = require('express');
+const cors = require('cors');
 
 const app = express();
 const cookieParser = require('cookie-parser');
 const router = require('./routes');
 
+app.use(cors());
 app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));

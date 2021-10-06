@@ -1,3 +1,3 @@
-const filterSearch = require('./getDataPostQuery');
+const getProducts = require('./getProducts');
 
-module.exports = { filterSearch };
+module.exports = { getProducts };

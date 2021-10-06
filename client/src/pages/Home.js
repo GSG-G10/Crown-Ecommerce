@@ -1,17 +1,21 @@
 import React, { Fragment } from "react";
-import { Carousel, Collection, Quotes } from "../components";
+import {
+  Carousel,
+  Collection,
+  Quotes,
+  Footer,
+  NewConforts,
+} from "../components";
 function Home() {
   return (
     <Fragment>
       {/* header */}
-      {/* Carousel */}
       <Carousel />
-      {/* quotes */}
       <Quotes />
       {/* category & button */}
-      {/* collection */}
+      <NewConforts />
       <Collection />
-      {/* footer */}
+      <Footer />
     </Fragment>
   );
 }

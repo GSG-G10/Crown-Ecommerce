@@ -1,7 +1,6 @@
 require('env2')('.env');
 const { join } = require('path');
 const express = require('express');
-const cors = require('cors');
 
 const app = express();
 const cookieParser = require('cookie-parser');

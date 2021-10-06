@@ -1,19 +1,19 @@
 const { createCookies, createSession } = require('../../utils');
+const { signupSchema } = require('../../utils/validation/signupValidation');
 const checkUser = require('./checkUser');
 const createUser = require('./createUser');
-const validateSignup = require('./validation');
 
 const signup = (req, res) => {
   const {
     userName, email, firstName, password,
   } = req.body;
-  const validation = validateSignup(userName, email, firstName, password);
-  if (validation) { return res.status(403).json({ message: validation }); }
-
-  checkUser(userName, email).then((exists) => {
-    // eslint-disable-next-line no-throw-literal
-    if (exists) { throw { message: exists, cause: 'validation error' }; }
-  }).then(() => createUser(userName, email, firstName, password))
+  signupSchema.validateAsync(req.body)
+    .catch(() => { throw { message: 'validation error', cause: 'invalid inputs' }; })
+    .then(() => checkUser(userName, email).then((exists) => {
+      // eslint-disable-next-line no-throw-literal
+      if (exists) { throw { message: exists, cause: 'validation error' }; }
+    }))
+    .then(() => createUser(userName, email, firstName, password))
     .then(() => createSession(userName))
     .then((token) => createCookies(res, userName, true, token))
     .then(() => res.status(201).json({ message: 'user registered successfully' }))

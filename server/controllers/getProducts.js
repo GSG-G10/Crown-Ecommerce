@@ -1,9 +1,9 @@
 const { getProducts } = require('../database/queries');
 
-const fetchProducts = (req, res) => {
+const fetchProducts = (req, res, next) => {
   getProducts()
     .then((data) => res.json(data))
-    .catch(() => res.status(500).json({ message: 'Internal server error' }));
+    .catch((err) => next(err));
 };
 
 module.exports = fetchProducts;

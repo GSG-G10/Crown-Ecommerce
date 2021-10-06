@@ -14,6 +14,8 @@ module.exports = (req, res, next) => {
       return next();
     });
   } else {
-    res.redirect('/login');
+    req.dataUser = null;
+    return next();
+    // res.redirect('/login');
   }
 };

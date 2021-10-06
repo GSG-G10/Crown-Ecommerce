@@ -12,6 +12,11 @@ function App() {
         />
         <button>Submit</button>
       </form>
+      <form method="post" action="/api/v1/cart/add-to-cart/2">
+        <input type="email" placeholder="Enter your email" name="email" />
+
+        <button>Submit</button>
+      </form>
     </div>
   );
 }

@@ -1,15 +1,23 @@
 const { addToCart } = require('../../database/queries/cart');
 
 module.exports = (req, res, next) => {
-  const { productId, quantity } = req.body;
-  const { username } = req.params;
-  addToCart(username, productId, quantity)
-    .then(() => {
-      res.status(200).json({
-        message: 'Product added to cart successfully',
+  // const { productId, quantity } = req.body;
+  const user_id = req.dataUser?.user_id;
+  if (user_id) {
+    const { id: productId } = req.params;
+    const { quantity = 1 } = req.body;
+    addToCart(user_id, productId, quantity)
+      .then(() => {
+        res.status(200).json({
+          message: 'Product added to cart successfully',
+        });
+      })
+      .catch((err) => {
+        next(err);
       });
-    })
-    .catch((err) => {
-      next(err);
+  } else {
+    res.status(200).json({
+      message: 'Product added to cart successfully,Confirm your purchases by logging in !! ',
     });
+  }
 };

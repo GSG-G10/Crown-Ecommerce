@@ -1,7 +1,8 @@
 const getAllProductsQuery = require('../database/queries/getAllProducts');
 
 const getAllProducts = (req, res, next) => {
-  getAllProductsQuery()
+  const { category } = req.params;
+  getAllProductsQuery(category)
     .then(({ rows }) => {
       res.json({ data: rows });
     })

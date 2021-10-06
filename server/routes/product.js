@@ -1,9 +1,9 @@
 const express = require('express');
 
 const product = express.Router();
-const getProductId = require('../controllers/get-product-id');
+const { getProductId } = require('../controllers');
 const { fetchProducts } = require('../controllers');
-const getRandomProduct = require('../controllers/get-product-random');
+const { getRandomProduct } = require('../controllers');
 
 product.get('/more', getRandomProduct);
 product.get('/:productId', getProductId);

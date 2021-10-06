@@ -1,7 +1,7 @@
 const express = require('express');
 
 const app = express();
-require('env2')('config.env');
+require('env2')('.env');
 const { join } = require('path');
 const cookieParser = require('cookie-parser');
 const router = require('./routes/index');

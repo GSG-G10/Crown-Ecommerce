@@ -1,10 +1,9 @@
 const { addToCart } = require('../../database/queries/cart');
 
 module.exports = (req, res, next) => {
-  // const { productId, quantity } = req.body;
   const user_id = req.dataUser?.user_id;
   if (user_id) {
-    const { id: productId } = req.params;
+    const { productId } = req.params;
     const { quantity = 1 } = req.body;
     addToCart(user_id, productId, quantity)
       .then(() => {

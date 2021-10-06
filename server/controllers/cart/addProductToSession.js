@@ -1,6 +1,6 @@
 // add product to cookie ==> cart
 module.exports = (req, res, next) => {
-  const { id: productId } = req.params;
+  const { productId } = req.params;
   const { quantity = 1 } = req.body;
   const { cart } = req.cookies;
 

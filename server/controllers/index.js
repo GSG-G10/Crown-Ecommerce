@@ -1,5 +1,7 @@
 const {
-  getCartController, addToCartController, getTotalCotroller, deleteProductController, addProductToSession,
+  getCartController, addToCartController,
+  getTotalCotroller, deleteProductController,
+  addProductToSession, deleteProductFromSession,
 } = require('./cart');
 const isAuth = require('./isAuth');
 
@@ -10,4 +12,5 @@ module.exports = {
   deleteProductController,
   isAuth,
   addProductToSession,
+  deleteProductFromSession,
 };

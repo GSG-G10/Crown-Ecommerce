@@ -6,11 +6,12 @@ const {
   deleteProductController,
   isAuth,
   addProductToSession,
+  deleteProductFromSession,
 } = require('../controllers');
 
 router.get('/', getCartController);
-router.post('/add-to-cart/:id', addProductToSession, isAuth, addToCartController);
-router.delete('/:username/:productId', deleteProductController);
-router.get('/total/:username', getTotalCotroller);
+router.post('/add-to-cart/:productId', addProductToSession, isAuth, addToCartController);
+router.post('/delete-product/:productId', deleteProductFromSession, isAuth, deleteProductController);
+router.get('/total', getTotalCotroller);
 
 module.exports = router;

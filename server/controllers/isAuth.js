@@ -14,6 +14,8 @@ module.exports = (req, res, next) => {
       return next();
     });
   } else {
-    res.redirect('/login');
+    res.status(401).json({
+      message: 'Unauthorized',
+    });
   }
 };

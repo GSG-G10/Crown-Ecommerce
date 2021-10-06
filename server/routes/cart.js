@@ -7,6 +7,6 @@ const {
 } = require('../controllers');
 
 router.get('/', isAuth, getCartController);
-router.delete('/add-to-cart/:productId', isAuth, addToCartController);
-router.post('/delete-product/:productId', isAuth, deleteProductController);
+router.post('/', isAuth, addToCartController);
+router.delete('/delete-product/:productId', isAuth, deleteProductController);
 module.exports = router;

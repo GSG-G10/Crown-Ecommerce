@@ -14,7 +14,7 @@ module.exports = (req, res, next) => {
         next(err);
       });
   } else {
-    res.status(201).json({
+    res.status(200).json({
       message: 'Product deleted from cart successfully',
     });
   }

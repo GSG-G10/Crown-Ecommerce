@@ -12,6 +12,6 @@ const getDataPost = require('../controllers/getDataPost');
 
 router.post('/login', loginUser);
 router.use('/cart', cartRoute);
-router.get('/search', getDataPost);
+router.get('/search/:query', getDataPost);
 
 module.exports = router;

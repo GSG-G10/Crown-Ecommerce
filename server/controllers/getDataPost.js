@@ -1,8 +1,12 @@
-const getDataPostQuery = require('../database/queries/getDataPostQuery');
+const { filterSearch } = require('../database/queries');
 
 const getDataPost = (req, res, next) => {
-  getDataPostQuery(req.query.q)
-    .then((data) => res.json({ data: data.rows }))
+  filterSearch(req.params.query)
+    .then(({ rows }) => rows)
+    .then((data) => {
+      res.json(data);
+    })
+
     .catch((err) => next(err));
 };
 

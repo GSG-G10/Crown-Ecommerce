@@ -18,9 +18,6 @@ function App() {
           <Route exact path="/">
             <Home />
           </Route>
-          <Route exact path="/favorite">
-            favorite page
-          </Route>
           <Route exact path="/user">
             user page
           </Route>

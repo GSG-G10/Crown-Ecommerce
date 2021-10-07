@@ -1,11 +1,14 @@
 import { Home } from "./pages";
 import "./App.css";
-import "antd/dist/antd.css";
-
+import Footer from "./components/Footer";
+import Product from "./pages/Product";
+import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 function App() {
   return (
     <div className="App">
-      <Home />
+      <Router>
+       <Home />
+      </Router>
     </div>
   );
 }

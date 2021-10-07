@@ -5,7 +5,10 @@ require('env2')('.env');
 const { join } = require('path');
 const cookieParser = require('cookie-parser');
 const router = require('./routes/index');
+const cors = require('cors');
+const router = require('./routes');
 
+app.use(cors());
 app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));

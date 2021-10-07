@@ -11,7 +11,6 @@ function App() {
   return (
     <div className="App">
       <Header />
-
       <div style={{ minHeight: "calc(100vh - 32px - 366.3px)" }}>
         {/* calc(100vh - nav height - footer height) */}
         <Switch>

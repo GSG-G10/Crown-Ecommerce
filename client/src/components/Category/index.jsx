@@ -1,11 +1,15 @@
 import "./style.css";
 import React, { useState, useEffect } from "react";
+import { useHistory } from "react-router-dom";
+import Card from "../Card";
+
 import { Tabs } from "antd";
 import "antd/dist/antd.css";
 
 const { TabPane } = Tabs;
 
 function Category() {
+  let history = useHistory();
   const [allData, setAllData] = useState([]);
   const [filterData, setFilterData] = useState([]);
 
@@ -24,6 +28,41 @@ function Category() {
     setFilterData(filterCategory);
   };
 
+  const handleClickNew = () => {
+    history.push("/category/new");
+  };
+
+  const handleClickMen = () => {
+    history.push("/category/men");
+  };
+
+  const handleClickWomen = () => {
+    history.push("/category/women");
+  };
+
+  const handleClickKids = () => {
+    history.push("/category/kids");
+  };
+
+  const renderData = () => {
+    if (filterData.length !== 0) {
+      return filterData.map((ele) => {
+        return (
+          <Card
+            data={{
+              id: 1,
+              title: ele.title,
+              category: ele.category,
+              image1: ele.image1,
+              price: ele.price,
+            }}
+          />
+        );
+      });
+    } else {
+      return "loading ... !";
+    }
+  };
   return (
     <div>
       <Tabs
@@ -34,33 +73,28 @@ function Category() {
         }}
         className="category-bar"
       >
-        <TabPane tab="New" key="new">
+        <TabPane tab="New" key="new" onClick={handleClickNew}>
           new
         </TabPane>
-        <TabPane tab="Men" key="men">
-          men
+        <TabPane tab="Men" key="men" onClick={handleClickMen}>
+          {renderData()}
         </TabPane>
-        <TabPane tab="Women" key="women">
-          women
+        <TabPane tab="Women" key="women" onClick={handleClickWomen}>
+          {renderData()}
         </TabPane>
-        <TabPane tab="Kids" key="kids">
-          kids
+        <TabPane tab="Kids" key="kids" onClick={handleClickKids}>
+          {renderData()}
         </TabPane>
         <TabPane tab="Both" key="Both">
-          Both
+          {renderData()}
         </TabPane>
         <TabPane tab="About As" key="About As">
-          About As
+          {renderData()}
         </TabPane>
-        <TabPane tab="Oue Blog" key="Oue Blog">
-          Oue Blog
+        <TabPane tab="Our Blog" key="Our Blog">
+          {renderData()}
         </TabPane>
       </Tabs>
-      <div>
-        {filterData.length !== 0
-          ? filterData.map((ele) => console.log(ele))
-          : "loading ... !"}
-      </div>
     </div>
   );
 }

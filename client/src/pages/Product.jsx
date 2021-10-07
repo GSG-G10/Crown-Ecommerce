@@ -19,16 +19,13 @@ function Product({ match }) {
   const [isLoader, setIsLoader] = useState(true);
 
   useEffect(() => {
-    ApiCall(`http://localhost:8080/api/v1/product/${idProduct}`).then(
-      (data) => {
-        setDataProduct(data);
-        setIsLoader(false);
-      }
-    );
+    ApiCall(`/api/v1/product/${idProduct}`).then((data) => {
+      setDataProduct(data);
+      setIsLoader(false);
+    });
 
-    ApiCall(`http://localhost:8080/api/v1/product/more`).then((data) => {
-      // console.log(data);
-      setDataMoreProduct([...data.data]);
+    ApiCall(`/api/v1/product/new-product`).then(({ data }) => {
+      setDataMoreProduct(data);
     });
   }, [idProduct]);
 

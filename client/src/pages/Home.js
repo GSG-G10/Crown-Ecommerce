@@ -6,10 +6,11 @@ import {
   Quotes,
   Footer,
   NewConfrts,
-} from "../components";
+} from '../components';
+
 function Home() {
   return (
-    <Fragment>
+    <>
       {/* header */}
       <Category />
 
@@ -19,7 +20,7 @@ function Home() {
       <NewConfrts />
       <Collection />
       <Footer />
-    </Fragment>
+    </>
   );
 }
 

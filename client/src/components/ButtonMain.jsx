@@ -1,4 +1,6 @@
-import React from "react";
+/* eslint-disable react/prop-types */
+/* eslint-disable react/button-has-type */
+import React from 'react';
 
 function ButtonMain({ className, children }) {
   return (

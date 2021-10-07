@@ -1,6 +1,7 @@
-import React from "react";
-import { Heading2, Para } from "../Typography";
-import "./style.css";
+import React from 'react';
+import { Heading2, Para } from '../Typography';
+import './style.css';
+
 function Quotes() {
   return (
     <>

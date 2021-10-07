@@ -1,17 +1,17 @@
-import React, { useEffect, useState } from "react";
-import ViewerImage from "../components/ImageViwer";
-import Span from "../components/Span";
-import "../styles/product-page.css";
-import ButtonMain from "../components/ButtonMain";
-import { ShoppingCartOutlined, HeartTwoTone } from "@ant-design/icons";
-import Page404 from "../components/Page404";
-import Loaded from "../components/Loaded";
-import { ApiCall } from "../components/ApiCall";
-import { Link } from "react-router-dom";
-import ImageTag from "../components/ImageTag";
+import React, { useEffect, useState } from 'react';
+import ViewerImage from '../components/ImageViwer';
+import Span from '../components/Span';
+import '../styles/product-page.css';
+import ButtonMain from '../components/ButtonMain';
+import { ShoppingCartOutlined, HeartTwoTone } from '@ant-design/icons';
+import Page404 from '../components/Page404';
+import Loaded from '../components/Loaded';
+import { ApiCall } from '../components/ApiCall';
+import { Link } from 'react-router-dom';
+import ImageTag from '../components/ImageTag';
 
 function Product({ match }) {
-  const [dataProduct, setDataProduct] = useState({ data: "title" });
+  const [dataProduct, setDataProduct] = useState({ data: 'title' });
   const [dataMoreProduct, setDataMoreProduct] = useState([]);
   const [colorSelect, setColorSelect] = useState(0);
   const [sizeSelect, setSizeSelect] = useState(2);
@@ -66,7 +66,7 @@ function Product({ match }) {
             </div>
             <div
               className="info_product_and_added"
-              style={{ textAlign: "left" }}
+              style={{ textAlign: 'left' }}
             >
               <Span
                 className="title_product"
@@ -78,37 +78,37 @@ function Product({ match }) {
               <div className="select_color">
                 <Span
                   className={`bowl_coloe ${
-                    colorSelect === 0 ? "active" : null
+                    colorSelect === 0 ? 'active' : null
                   }`}
                   onClick={() => selectColore(0)}
                 />
                 <Span
                   className={`bowl_coloe ${
-                    colorSelect === 1 ? "active" : null
+                    colorSelect === 1 ? 'active' : null
                   }`}
                   onClick={() => selectColore(1)}
                 />
                 <Span
                   className={`bowl_coloe ${
-                    colorSelect === 2 ? "active" : null
+                    colorSelect === 2 ? 'active' : null
                   }`}
                   onClick={() => selectColore(2)}
                 />
                 <Span
                   className={`bowl_coloe ${
-                    colorSelect === 3 ? "active" : null
+                    colorSelect === 3 ? 'active' : null
                   }`}
                   onClick={() => selectColore(3)}
                 />
                 <Span
                   className={`bowl_coloe ${
-                    colorSelect === 4 ? "active" : null
+                    colorSelect === 4 ? 'active' : null
                   }`}
                   onClick={() => selectColore(4)}
                 />
                 <Span
                   className={`bowl_coloe ${
-                    colorSelect === 5 ? "active" : null
+                    colorSelect === 5 ? 'active' : null
                   }`}
                   onClick={() => selectColore(5)}
                 />
@@ -118,32 +118,32 @@ function Product({ match }) {
               <div className="select_size">
                 <Span
                   text="S"
-                  className={`bowl_size ${sizeSelect === 0 ? "active" : null}`}
+                  className={`bowl_size ${sizeSelect === 0 ? 'active' : null}`}
                   onClick={() => selectSizes(0)}
                 />
                 <Span
                   text="M"
-                  className={`bowl_size ${sizeSelect === 1 ? "active" : null}`}
+                  className={`bowl_size ${sizeSelect === 1 ? 'active' : null}`}
                   onClick={() => selectSizes(1)}
                 />
                 <Span
                   text="L"
-                  className={`bowl_size ${sizeSelect === 2 ? "active" : null}`}
+                  className={`bowl_size ${sizeSelect === 2 ? 'active' : null}`}
                   onClick={() => selectSizes(2)}
                 />
                 <Span
                   text="XL"
-                  className={`bowl_size ${sizeSelect === 3 ? "active" : null}`}
+                  className={`bowl_size ${sizeSelect === 3 ? 'active' : null}`}
                   onClick={() => selectSizes(3)}
                 />
                 <Span
                   text="XX"
-                  className={`bowl_size ${sizeSelect === 4 ? "active" : null}`}
+                  className={`bowl_size ${sizeSelect === 4 ? 'active' : null}`}
                   onClick={() => selectSizes(4)}
                 />
                 <Span
                   text="3X"
-                  className={`bowl_size ${sizeSelect === 5 ? "active" : null}`}
+                  className={`bowl_size ${sizeSelect === 5 ? 'active' : null}`}
                   onClick={() => selectSizes(5)}
                 />
               </div>
@@ -164,17 +164,16 @@ function Product({ match }) {
             <div className="wrapper_more_img">
               {/* dataMoreProduct > 0 && */}
               {console.log(dataMoreProduct)}
-              {dataMoreProduct.map((prod, i) => {
+              {dataMoreProduct.map((prod, i) =>
                 // console.log(prod);
-                return (
+                (
                   <ImageTag
                     onClick={() => newMoreProduct(prod.id)}
                     key={i}
                     className="banar_nore_img"
                     src={prod.image1}
                   />
-                );
-              })}
+                ))}
             </div>
           </div>
         </>

@@ -23,7 +23,7 @@ const LoginForm = () => {
           name="email"
           rules={[
             {
-              type: 'email',
+              type: "email",
               required: true,
               message: "Enter your email",
             },
@@ -45,10 +45,10 @@ const LoginForm = () => {
           <Input.Password />
         </Item>
 
-          <Item name="signup" valuePropName="checked">
-            <span>you don't have Account? </span>
-            <Link to="/signup"> Sign up</Link>
-          </Item>
+        <Item name="signup" valuePropName="checked">
+          <span>you don't have Account? </span>
+          <Link to="/signup"> Sign up</Link>
+        </Item>
 
         <Item>
           <Button className="btn-form" type="primary" htmlType="submit">

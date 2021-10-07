@@ -1,5 +1,5 @@
 const getUserQuery = require('../../database/queries/getUser');
-const { createCookies } = require('../../utils');
+const { createCookies, hashPassword } = require('../../utils');
 const { signToken } = require('../../utils/jwt');
 const { signupSchema } = require('../../utils/validation/signupValidation');
 const checkUser = require('./checkUser');
@@ -16,7 +16,12 @@ const signup = (req, res, next) => {
       // eslint-disable-next-line no-throw-literal
       if (exists) { throw { message: exists, cause: 'validation error' }; }
     }))
-    .then(() => createUser(userName, email, firstName, password))
+    .then(() => hashPassword(password))
+    .then((err, hashed) => {
+      // eslint-disable-next-line no-throw-literal
+      if (err) { throw { message: 'error' }; } else return hashed;
+    })
+    .then((hashedPassword) => createUser(userName, email, firstName, hashedPassword))
     .then(() => getUserQuery(userName, email))
     .then((data) => data.rows[0].user_id)
     .then((userId) => signToken({ user_id: userId }))

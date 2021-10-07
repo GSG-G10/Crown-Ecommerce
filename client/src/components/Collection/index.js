@@ -1,7 +1,7 @@
-import React from "react";
-import CardCollection from "./CardCollection";
-import { man, womn, child } from "../../assets";
-import "./style.css";
+import React from 'react';
+import CardCollection from './CardCollection';
+import { man, womn, child } from '../../assets';
+import './style.css';
 
 function Collection() {
   return (

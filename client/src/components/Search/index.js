@@ -5,7 +5,6 @@ import { useHistory } from "react-router-dom";
 
 const Complete = () => {
   let history = useHistory();
-  console.log(history);
   const [query, setQuery] = useState(" ");
   const [product, setProduct] = useState([]);
 

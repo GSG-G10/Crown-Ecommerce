@@ -1,0 +1,38 @@
+.card-container{
+    width: 25vw;
+    height: 40vh;
+    position: relative;
+}
+.card-details{
+    position: absolute;
+    background: rgba(0,0,0,.3);
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 4rem;
+}
+.button{
+    padding: .5rem;
+    font-size: .8rem;
+    letter-spacing: 1.2px;
+    font-weight: 600;
+    width: 11vw;
+    transition:0.08s ease-in;
+    cursor: pointer;
+    border: none;
+}
+.button:hover{
+    background: #f63838;
+    color:#fff
+    
+}
+.collection-container{
+display: flex;
+padding: 1rem 2rem;
+justify-content: space-around;
+}

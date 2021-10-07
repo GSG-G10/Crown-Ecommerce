@@ -5,11 +5,12 @@ const { signupSchema } = require('../../utils/validation/signupValidation');
 const checkUser = require('./checkUser');
 const createUser = require('./createUser');
 
-const signup = (req, res) => {
+const signup = (req, res, next) => {
   const {
     userName, email, firstName, password,
   } = req.body;
   signupSchema.validateAsync(req.body)
+    // eslint-disable-next-line no-throw-literal
     .catch(() => { throw { message: 'validation error', cause: 'invalid inputs' }; })
     .then(() => checkUser(userName, email).then((exists) => {
       // eslint-disable-next-line no-throw-literal
@@ -22,7 +23,7 @@ const signup = (req, res) => {
     .then((token) => createCookies(res, userName, true, token))
     .then(() => res.status(201).json({ message: 'user registered successfully' }))
     .catch((err) => {
-      if (!err.cause) { res.status(500).json({ message: 'internal server error' }); } else res.status(403).json({ message: err.message });
+      next(err);
     });
   return null;
 };

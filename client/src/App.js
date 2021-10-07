@@ -1,18 +1,18 @@
-import { Home } from "./pages";
-import "./App.css";
-import Footer from "./components/Footer";
-import Product from "./pages/Product";
-import { Complete } from "./components";
+import { Home } from './pages';
+import './App.css';
+import Footer from './components/Footer';
+import Product from './pages/Product';
+import { Complete, Login } from './components';
 
-import { Switch, Route } from "react-router-dom";
-import Header from "./components/Header";
+import { Switch, Route } from 'react-router-dom';
+import Header from './components/Header';
 // import Category from "./components/Category";
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <div style={{ minHeight: "calc(100vh - 32px - 366.3px)" }}>
+      <div style={{ minHeight: 'calc(100vh - 32px - 366.3px)' }}>
         {/* calc(100vh - nav height - footer height) */}
         <Switch>
           <Route exact path="/">
@@ -26,7 +26,7 @@ function App() {
             card page
           </Route>
           {/* <Route exact path="/category" component={Category} /> */}
-
+          <Route exact path="/login" component={Login} />
           <Route exact path="/" component={Footer} />
           <Route exact path="/search" component={Complete} />
           <Route exact path="/product/:id" component={Product} />

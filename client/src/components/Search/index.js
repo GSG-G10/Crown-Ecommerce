@@ -1,28 +1,20 @@
-import { Input, AutoComplete } from "antd";
-import React, { useState, useEffect } from "react";
-import "./Search.css";
-import { useHistory } from "react-router-dom";
+import { Input, AutoComplete } from 'antd';
+import React, { useState, useEffect } from 'react';
+import './Search.css';
+import { useHistory } from 'react-router-dom';
 
 const Complete = () => {
-  let history = useHistory();
-  const [query, setQuery] = useState(" ");
+  const history = useHistory();
+  const [query, setQuery] = useState(' ');
   const [product, setProduct] = useState([]);
 
   useEffect(() => {
-    if (query !== " ") {
-      fetch(`/api/v1/search/${query}`, { mode: "cors" })
-        .then((result) => {
-          return result.json();
-        })
-        .then((data) =>
-          data.map(({ id, title }) => {
-            return { value: id, label: title };
-          })
-        )
+    if (query !== ' ') {
+      fetch(`/api/v1/search/${query}`, { mode: 'cors' })
+        .then((result) => result.json())
+        .then((data) => data.map(({ id, title }) => ({ value: id, label: title })))
         .then((data) => setProduct(data))
-        .catch((err) => {
-          return <p>{err}</p>;
-        });
+        .catch((err) => <p>{err}</p>);
     }
   }, [query]);
 

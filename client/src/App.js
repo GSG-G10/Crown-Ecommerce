@@ -1,18 +1,37 @@
+import { Home } from "./pages";
 import "./App.css";
-import "antd/dist/antd.css";
 import Footer from "./components/Footer";
 import Product from "./pages/Product";
 import { Complete } from "./components";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+
+import { Switch, Route } from "react-router-dom";
+import Header from "./components/Header";
+// import Category from "./components/Category";
+
 function App() {
   return (
     <div className="App">
-      Hi from App
-      <Router>
-        <Route exact path="/" component={Footer} />
-        <Route exact path="/search" component={Complete} />
-        <Route exact path="/product/:id" component={Product} />
-      </Router>
+      <Header />
+      <div style={{ minHeight: "calc(100vh - 32px - 366.3px)" }}>
+        {/* calc(100vh - nav height - footer height) */}
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+
+          <Route exact path="/user">
+            user page
+          </Route>
+          <Route exact path="/card">
+            card page
+          </Route>
+          {/* <Route exact path="/category" component={Category} /> */}
+
+          <Route exact path="/" component={Footer} />
+          <Route exact path="/search" component={Complete} />
+          <Route exact path="/product/:id" component={Product} />
+        </Switch>
+      </div>
     </div>
   );
 }

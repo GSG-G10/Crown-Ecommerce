@@ -1,5 +1,5 @@
 /* eslint-disable no-throw-literal */
-const { compare } = require('bcryptjs');
+const { verify } = require('bcrypt');
 const loginQuery = require('../database/queries/loginQuery');
 const getHashPassword = require('../database/queries/getHashPassword');
 const { loginSchema } = require('../utils/validation/loginValidation');
@@ -20,7 +20,7 @@ const checkLogin = (req, res, next) => {
       userId = user_id;
       return password;
     })
-    .then((hashed) => compare(req.body.password, hashed))
+    .then((hashed) => verify(req.body.password, hashed))
     .then((result) => {
       if (result) {
         return signToken({ user_id: userId });

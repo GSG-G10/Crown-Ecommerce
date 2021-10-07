@@ -6,5 +6,5 @@ export const ApiCall = (url) => {
     .then((data) => {
       return data;
     })
-    .catch((err) => console.lo(err));
+    .catch((err) => console.log(err));
 };

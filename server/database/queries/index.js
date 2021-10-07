@@ -1,4 +1,8 @@
 const getProducts = require('./getProducts');
-const filterSearch = require('./getDataPostQuery')
 
-module.exports = { getProducts, filterSearch };
+const { checkUserQuery, addUserQuery } = require('./signupQueries');
+const filterSearch = require('./getDataPostQuery');
+
+module.exports = {
+  getProducts, checkUserQuery, addUserQuery, filterSearch,
+};

@@ -1,4 +1,5 @@
-import "./style.css";
+/* eslint-disable react/prop-types */
+import './style.css';
 
 export function Heading2({ children }) {
   return <h2 className="heading-2">{children}</h2>;

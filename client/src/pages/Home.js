@@ -1,14 +1,14 @@
-import React, { Fragment } from "react";
 import {
   Carousel,
   Collection,
   Quotes,
   Footer,
   NewConfrts,
-} from "../components";
+} from '../components';
+
 function Home() {
   return (
-    <Fragment>
+    <>
       {/* header */}
       <Carousel />
       <Quotes />
@@ -16,7 +16,7 @@ function Home() {
       <NewConfrts />
       <Collection />
       <Footer />
-    </Fragment>
+    </>
   );
 }
 

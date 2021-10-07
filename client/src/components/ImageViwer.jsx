@@ -1,5 +1,5 @@
-import React from "react";
-import { Image } from "antd";
+import React from 'react';
+import { Image } from 'antd';
 
 function ViewerImage({ className, src }) {
   return (

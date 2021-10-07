@@ -1,5 +1,6 @@
 import React from "react";
 import "./style.css";
+import Search from "../Search";
 import {
   HeartOutlined,
   ShoppingCartOutlined,
@@ -15,7 +16,7 @@ function Header(params) {
       </Link>
 
       <div className="search-nav">
-        <input type="text" />
+        <Search />
       </div>
 
       <div className="icon">

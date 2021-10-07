@@ -1,4 +1,4 @@
-INSERT INTO USERS (username,f_name, email, pasword) 
+INSERT INTO USERS (username,f_name, email, password) 
 VALUES 
   ('noorin','Noor','noor@gmail.com', '$2a$10$AkqtzOyH/HU8srfRDauQouKfE1vSA0PmKA8UjLDX.acEr.jc7xSMW'),
   ('elham','Elham','elham@gmail.com', '$2a$10$d0xD86pbtps5Qsci0KEqKuMvQ75sSvY76iMciv/sgJwbUOJmCFJtC');
@@ -44,6 +44,7 @@ VALUES
 'https://image.spreadshirtmedia.com/image-server/v1/mp/productTypes/813/views/2/appearances/386,width=650,height=800,backgroundColor=F2F2F2,modelId=2474,crop=detail.jpg');
 
 INSERT INTO PRODUCTS (title, category, price, image1, image2,image3) 
+VALUES
 ('Cool Mom Funny Mothers Gift','women',35,
 'https://image.spreadshirtmedia.com/image-server/v1/mp/products/T951A550MPA3076PT17X0Y24D1021763085FS2951/views/1,width=650,height=800,appearanceId=550,backgroundColor=F2F2F2/cool-mom-funny-mothers-gift-unisex-baseball-t-shirt.jpg',
 'https://image.spreadshirtmedia.com/image-server/v1/mp/products/T951A550MPA3076PT17X0Y24D1021763085FS2951/views/1,width=650,height=800,appearanceId=550,backgroundColor=F2F2F2,modelId=4892,crop=detail/cool-mom-funny-mothers-gift-unisex-baseball-t-shirt.jpg',
@@ -63,6 +64,6 @@ VALUES('pink ladybug','kids',13,
 'https://image.spreadshirtmedia.com/image-server/v1/mp/products/T48A2MPA2954PT17X0Y1D1018577076FS2620/views/1,width=650,height=800,appearanceId=2,backgroundColor=F2F2F2/hockeysaurus-hockey-cute-funny-kids-dinosaur-gift-kids-t-shirt.jpg');
 
 
-INSERT INTO CART (username, id, quantity) VALUES
- ('noorin',5,2),
- ('elham',2,1);
+INSERT INTO CART (userId, productId, quantity) VALUES
+ (1,5,2),
+ (2,2,1);

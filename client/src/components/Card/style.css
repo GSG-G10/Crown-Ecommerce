@@ -1,0 +1,19 @@
+
+.container-card .ant-card-body{
+    display: flex;
+   align-items: self-end;
+    justify-content: space-between;
+    text-align: left;
+}
+.container-card button{
+    background: none;
+    border: none;
+}
+.container-card .ant-card-cover img{
+height: 51vh;
+}
+.container-card svg{
+    width: 2em;
+    height: 2em;
+    cursor: pointer;
+}

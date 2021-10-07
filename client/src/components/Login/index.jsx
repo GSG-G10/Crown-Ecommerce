@@ -1,15 +1,16 @@
-import React, { useState, useEffect } from "react";
-import { Form, Input, Button } from "antd";
-import { Link } from "react-router-dom";
-import axios from "axios";
-import "./style.css";
+import React, { useState, useEffect } from 'react';
+import { Form, Input, Button } from 'antd';
+import { Link } from 'react-router-dom';
+import axios from 'axios';
+import './style.css';
+
 const { Item } = Form;
 
 const Login = () => {
   const [loginData, setLoginData] = useState(null);
   const onFinish = (values) => {
     setLoginData([values]);
-    axios.post("/login", values);
+    axios.post('/login', values);
     console.log(values);
   };
 
@@ -27,9 +28,9 @@ const Login = () => {
           name="email"
           rules={[
             {
-              type: "email",
+              type: 'email',
               required: true,
-              message: "Enter your email",
+              message: 'Enter your email',
             },
           ]}
         >
@@ -42,7 +43,7 @@ const Login = () => {
           rules={[
             {
               required: true,
-              message: "Enter your password!",
+              message: 'Enter your password!',
             },
           ]}
         >

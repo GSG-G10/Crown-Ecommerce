@@ -1,7 +1,9 @@
-import React from "react";
-import { Carousel } from "antd";
-import { back2, back3, back4, back5 } from "../../assets";
-import "./style.css";
+import React from 'react';
+import { Carousel } from 'antd';
+import {
+  back2, back3, back4, back5,
+} from '../../assets';
+import './style.css';
 
 function CarouselViwe() {
   return (

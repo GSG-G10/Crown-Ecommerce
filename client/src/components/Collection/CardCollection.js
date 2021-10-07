@@ -1,6 +1,8 @@
-import React from "react";
-import { Heading5, Heading4 } from "../Typography";
-import "./style.css";
+/* eslint-disable react/prop-types */
+/* eslint-disable react/button-has-type */
+import { Heading5, Heading4 } from '../Typography';
+import './style.css';
+
 function CardCollection({ image, typeCategory, descriptoin }) {
   return (
     <div className="card-container">

@@ -1,4 +1,4 @@
-import { Spin, Space } from "antd";
+import { Spin, Space } from 'antd';
 
 function loaded() {
   return (

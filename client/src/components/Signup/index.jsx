@@ -22,6 +22,19 @@ const Singup = () => {
         layout="vertical"
         scrollToFirstError
       >
+          <Item
+          label="userName"
+          name="username"
+          rules={[
+            {
+              type: "email",
+              required: true,
+              message: "Enter your email",
+            },
+          ]}
+        >
+          <Input autoFocus />
+        </Item>
         <Item
           label="Email"
           name="email"

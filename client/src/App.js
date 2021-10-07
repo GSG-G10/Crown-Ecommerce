@@ -6,6 +6,7 @@ import { Complete } from "./components";
 
 import { Switch, Route } from "react-router-dom";
 import Header from "./components/Header";
+// import Category from "./components/Category";
 
 function App() {
   return (
@@ -17,12 +18,15 @@ function App() {
           <Route exact path="/">
             <Home />
           </Route>
+
           <Route exact path="/user">
             user page
           </Route>
           <Route exact path="/card">
             card page
           </Route>
+          {/* <Route exact path="/category" component={Category} /> */}
+
           <Route exact path="/" component={Footer} />
           <Route exact path="/search" component={Complete} />
           <Route exact path="/product/:id" component={Product} />

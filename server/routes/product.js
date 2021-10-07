@@ -3,7 +3,7 @@ const express = require('express');
 const product = express.Router();
 const getProductId = require('../controllers/get-product-id');
 const getAllProducts = require('../controllers/getAllProducts');
-const { getProductId, fetchProducts, getRandomProduct } = require('../controllers');
+const { fetchProducts, getRandomProduct } = require('../controllers');
 
 product.get('/category/:category', getAllProducts);
 product.get('/new-product', getRandomProduct);

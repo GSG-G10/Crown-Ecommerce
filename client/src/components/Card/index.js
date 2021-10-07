@@ -8,10 +8,7 @@ import './style.css';
 
 const { Meta } = Card;
 function CardWrapper({
-  key,
-  data: {
-    id, title, category, image1, price, onClick,
-  },
+  data: { id, title, category, image1, price, onClick },
 }) {
   return (
     <Link to={`/product/${id}`}>

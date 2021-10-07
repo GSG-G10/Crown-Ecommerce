@@ -1,3 +1,5 @@
+import React, { Fragment } from "react";
+import Category from "../components/Category";
 import {
   Carousel,
   Collection,
@@ -10,6 +12,8 @@ function Home() {
   return (
     <>
       {/* header */}
+      <Category />
+
       <Carousel />
       <Quotes />
       {/* category & button */}

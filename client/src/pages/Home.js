@@ -4,7 +4,7 @@ import {
   Collection,
   Quotes,
   Footer,
-  NewConforts,
+  NewConfrts,
 } from "../components";
 function Home() {
   return (
@@ -13,7 +13,7 @@ function Home() {
       <Carousel />
       <Quotes />
       {/* category & button */}
-      <NewConforts />
+      <NewConfrts />
       <Collection />
       <Footer />
     </Fragment>

@@ -8,12 +8,6 @@ function App() {
       <Home />
     </div>
   );
-<<<<<<< HEAD
-=======
-    
-  );
-
->>>>>>> 2fb5dad6b70c23e1cc1d164cf929d0fa41b72bcd
 }
 
 export default App;

@@ -1,35 +1,49 @@
-import React, { useState, useEffect } from "react";
-import { Form, Input, Button } from "antd";
-import { Link } from "react-router-dom";
-import axios from "axios";
-import "./style.css";
+import React, { useState } from 'react';
+import { Form, Input, Button } from 'antd';
+import { Link } from 'react-router-dom';
+import axios from 'axios';
+import './style.css';
+
 const { Item } = Form;
 
 const Singup = () => {
-  const [loginData, setLoginData] = useState(null);
+  const [signupData, setSignupData] = useState(null);
   const onFinish = (values) => {
-    setLoginData([values]);
-    axios.post("/login", values);
+    setSignupData([values]);
+    axios.post('/signup', values);
     console.log(values);
   };
 
   return (
-    <div className="login-form">
+    <div className="signup-form">
       <Form
-        name="login-form"
+        name="signup-form"
         onFinish={onFinish}
         autoComplete="off"
         layout="vertical"
         scrollToFirstError
       >
-          <Item
+        <Item
           label="userName"
-          name="username"
+          name="userName"
           rules={[
             {
-              type: "email",
+              type: 'text',
               required: true,
-              message: "Enter your email",
+              message: 'Enter username',
+            },
+          ]}
+        >
+          <Input autoFocus />
+        </Item>
+        <Item
+          label="firstName"
+          name="firstName"
+          rules={[
+            {
+              type: 'text',
+              required: true,
+              message: 'Enter firstName',
             },
           ]}
         >
@@ -40,9 +54,9 @@ const Singup = () => {
           name="email"
           rules={[
             {
-              type: "email",
+              type: 'email',
               required: true,
-              message: "Enter your email",
+              message: 'Enter your email',
             },
           ]}
         >
@@ -55,7 +69,7 @@ const Singup = () => {
           rules={[
             {
               required: true,
-              message: "Enter your password!",
+              message: 'Enter your password!',
             },
           ]}
         >
